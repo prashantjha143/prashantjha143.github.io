@@ -108,6 +108,79 @@
 .zoom-effect:hover {
   transform: scale(1.1);
 }
+/* ================================
+   Responsive Design (Auto-fit)
+================================ */
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.container, .row, .col-md-6, .col-md-12 {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix text overflow and maintain readability */
+h1, h2, h3, p, span {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Adjust layout for tablets */
+@media (max-width: 992px) {
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+  .about-mf .about-img img {
+    margin: auto;
+    display: block;
+  }
+  .col-md-6, .col-lg-5, .col-lg-7 {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .one-third, .one-forth {
+    width: 100%;
+  }
+}
+
+/* Adjust for small screens (phones) */
+@media (max-width: 768px) {
+  #typing-animation {
+    font-size: 20px;
+  }
+  h1, h2 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  .img-about {
+    margin-bottom: 20px;
+  }
+  .progress {
+    height: 0.5rem;
+  }
+  .zoom-effect:hover {
+    transform: none; /* Disable zoom effect on touch devices */
+  }
+}
+
+/* Make hero image fit better */
+.hero .img {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Ensure footer text fits nicely */
+footer p {
+  font-size: 14px;
+  text-align: center;
+}
 
 
 </style>
